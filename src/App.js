@@ -18,7 +18,7 @@ this.fetchAdvice();
  fetchAdvice = () => {
  axios.get('https://api.adviceslip.com/advice')
    .then((response) => {
-     const {advice} = response.data.slip;
+    const {advice} = response.data.slip;
      this.setState({advice: advice});
    })
    .catch((error) => {
@@ -37,7 +37,7 @@ this.fetchAdvice();
        
         <button className="button" onClick= {this.fetchAdvice} >CLICK ME TO ADVICE YOU</button>
       </div>
-    <h2><marquee  width="0"direction="right">MAKE SURE YOU TAKE THE ADVICE SERIOUS: SirConfy Cares</marquee></h2>
+    {/* <h2><marquee  width="0"direction="right">MAKE SURE YOU TAKE THE ADVICE SERIOUS: SirConfy Cares</marquee></h2> */}
     </div>
   );
   }
